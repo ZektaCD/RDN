@@ -1,0 +1,127 @@
+.kenburns-top-left {
+  animation: kenburns-top-center 3s ease-out both;
+}
+
+.titles-home {
+  display: flex;
+  font-size: 50px;
+}
+
+.rdn-color-blue {
+  color: var(--brand-color-blue);
+}
+
+.rdn-color-red {
+  color: var(--brand-color-red-b);
+}
+
+.s-welcome-home {
+  height: calc(100vh - 56px);
+}
+
+.welcome-home {
+  height: 100%;
+  background-image: url("../../../../src/assets/bg/4.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: brightness(70%);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.title-welcome-home {
+  width: 75%;
+  z-index: 2;
+  /* font-size: 70px; */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.title-welcome-home .ptext-a{
+  font-size: 70px;
+}
+
+.title-welcome-home .ptext-b{
+  font-size: 20px;
+}
+
+.title-welcome-home a {
+  width: 25%;
+}
+
+.s-about-home {
+  background-image: url("../../../../src/assets/bg/bg-rdn-about4.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mvv-content p,
+.mvv-content ul {
+  font-size: 12px;
+  list-style: none;
+}
+
+.card-grid-service {
+  /* margin-right: 20px; */
+  background-color: white;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  padding: 40px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.card-list li {
+  color: #53627c;
+}
+
+.icon-svg-services {
+  fill: #1e1e1e;
+}
+
+.s-contact-home {
+  background-color: var(--brand-color-blue);
+}
+
+@keyframes kenburns-top-center {
+  0% {
+    transform: scale(1) translate(0, 0);
+    transform-origin: 16% 16%;
+  }
+  100% {
+    transform: scale(1.25) translate(-20px, -15px);
+    transform-origin: top center;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (max-width: 1400px) {
+}
+/* X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+}
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+}
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .title-welcome-home {
+    font-size: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .title-welcome-home a {
+    width: 50%;
+  }
+  .titles-home {
+    font-size: 40px;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+}

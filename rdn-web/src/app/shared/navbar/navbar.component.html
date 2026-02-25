@@ -1,0 +1,33 @@
+<nav class="navbar fixed-top navbar-expand-lg bg-light-subtle f-bar-sb"
+  >
+  <!-- [ngClass]="{'scrolled-bar': !isScrolled, 'bg-nav-vul-scrolled' : isScrolled}" -->
+  <div class="container-fluid px-5">
+    <a class="navbar-brand" routerLink="/site/home" fragment="home-spot" href="#home-spot">
+      <img src="/assets/img/logo/logo-color-sinLeyenda.png" alt="Logo" width="100" height="40">
+    </a>
+    <button class="navbar-toggler border-0 border-opacity-0 py-3 px-4" type="button" data-bs-toggle="collapse"
+      data-bs-target="#itemsNavHome" aria-controls="itemsNavHome" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="text-light">
+        <fa-icon class="fs-2" [icon]="faBars"></fa-icon>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" id="itemsNavHome">
+      <div class="ms-auto">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item px-3 py-2 hvr-underline-from-center">
+            <a class="nav-link active" routerLink="/site/home" fragment="home-spot" routerLinkActive="active-spot" href="#home-spot">Home</a>
+          </li>
+          <li class="nav-item px-3 py-2 hvr-underline-from-center">
+            <a class="nav-link active" routerLink="/site/home" fragment="about-spot" routerLinkActive="active-spot" href="#about-spot">La Empresa</a>
+          </li>
+          <li class="nav-item px-3 py-2 hvr-underline-from-center">
+            <a class="nav-link active" routerLink="/site/home" fragment="service-spot" routerLinkActive="active-spot" href="#service-spot">Servicios</a>
+          </li>
+          <li class="nav-item px-3 py-2 hvr-underline-from-center">
+            <a class="nav-link active" routerLink="/site/home" fragment="contact-spot" href="#contact-spot">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
