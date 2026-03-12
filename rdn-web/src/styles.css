@@ -1,10 +1,10 @@
+@import "tailwindcss";
 :root{
   --brand-color-red-a: #DA241B;
   --brand-color-red-b: #9D251F;
   --brand-color-blue: #1f0b66;
   --brand-color-blue-b: #2705a0;
 }
-
 
 @font-face {
   font-family: 'bar-l';

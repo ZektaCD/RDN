@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faArrowRightLong,
@@ -20,7 +20,7 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FontAwesomeModule, CommonModule, ReactiveFormsModule, FooterComponent],
+  imports: [FontAwesomeModule, CommonModule, ReactiveFormsModule, FooterComponent, RouterModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
@@ -31,6 +31,8 @@ export class HomeComponent implements OnInit{
   faArrowRight = faArrowRightLong;
 
   cargando = false;
+  enviado = false;
+  error = '';
   contactForm: FormGroup;
   servicios_info_array = [
     {
@@ -80,10 +82,10 @@ export class HomeComponent implements OnInit{
   constructor(private fb: FormBuilder){
     this.contactForm = this.fb.group(
       {
-        name_surname:[],
-        email:[],
-        number:[],
-        message:[]
+        name_surname: ['', [Validators.required, Validators.minLength(3)]],
+        email: ['', [Validators.required, Validators.email]],
+        number: ['', [Validators.required, Validators.pattern(/^[0-9+\-\s()]+$/)]],
+        message: ['', [Validators.required, Validators.minLength(10)]]
       }
     );
   }
@@ -92,14 +94,51 @@ export class HomeComponent implements OnInit{
     const swiper = new Swiper('.swiper',{
       direction: 'horizontal',
       loop: true,
-      // freeMode: true,
       slidesPerView: 4,
       spaceBetween: 20,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 4,
+        },
+      },
     });
   }
 
   get f(){
     return this.contactForm.controls;
+  }
+
+  onSubmit() {
+    if (this.contactForm.valid) {
+      this.cargando = true;
+      this.error = '';
+      this.enviado = false;
+
+      const formData = new FormData();
+      formData.append('name', this.contactForm.get('name_surname')?.value || '');
+      formData.append('email', this.contactForm.get('email')?.value || '');
+      formData.append('phone', this.contactForm.get('number')?.value || '');
+      formData.append('message', this.contactForm.get('message')?.value || '');
+
+      // TODO: Implementar envío al backend
+      // Simulamos delay para demostración
+      setTimeout(() => {
+        this.cargando = false;
+        this.enviado = true;
+        this.contactForm.reset();
+        
+        // Ocultar mensaje de éxito después de 5 segundos
+        setTimeout(() => {
+          this.enviado = false;
+        }, 5000);
+      }, 1500);
+    }
   }
 
 }

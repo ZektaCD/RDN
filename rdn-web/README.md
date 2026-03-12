@@ -1,10 +1,21 @@
 # RdnWeb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+This project has been upgraded to Angular 21 and should be built with the corresponding Angular CLI 21 release.
+It now uses **bun** as the package manager instead of npm.  Make sure you have [bun](https://bun.sh/) installed and
+run `bun install` in the project root before working with the code.
+
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+With bun installed you can start the dev server using the familiar npm‑style commands:
+
+```bash
+bun run start       # equivalent to ng serve
+# or
+bun start           # bun automatically prefixes run for known script names
+```
+
+Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
