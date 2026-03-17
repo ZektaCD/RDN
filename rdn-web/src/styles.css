@@ -121,11 +121,11 @@
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (max-width: 1400px) {
-  
+
 }
 /* X-Large devices (large desktops, 1200px and up) */
 @media (max-width: 1200px) {
-  
+
 }
 /* Large devices (desktops, 992px and up) */
 @media (max-width: 992px) {
@@ -142,5 +142,43 @@
   .rdn-section-paddingX{
     padding-left: 40px;
     padding-right: 40px;
+  }
+}
+
+.scroll-fade-in {
+  view-timeline-name: --fin;
+  view-timeline-axis: block;
+  animation-timeline: --fin;
+  animation-name: fade-in;
+  animation-range: 0% 80%;
+  animation-fill-mode: both;
+  transition: all ease-in-out;
+}
+
+.scroll-fade-out {
+  animation-timeline: scroll(root);
+  animation-name: fade-out;
+  animation-fill-mode: forwards;
+  animation-range: 0 600px;
+}
+
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }

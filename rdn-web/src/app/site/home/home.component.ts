@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+ import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -132,7 +132,7 @@ export class HomeComponent implements OnInit{
         this.cargando = false;
         this.enviado = true;
         this.contactForm.reset();
-        
+
         // Ocultar mensaje de éxito después de 5 segundos
         setTimeout(() => {
           this.enviado = false;
