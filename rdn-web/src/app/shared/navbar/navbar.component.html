@@ -1,19 +1,19 @@
-<nav class="fixed top-10 left-2/12 bg-gray-100 shadow-md font-bar-sb w-8/12 z-50 py-2 rounded-2xl">
-  <div class="max-w-7xl mx-auto px-5 py-0">
+<nav class="fixed top-0 lg:top-5 left-0 lg:left-3/12 w-full lg:w-6/12 z-50">
+  <div class="max-w-7xl mx-auto px-5 bg-[rgba(255,255,255,0.7)] backdrop-blur-xl shadow-lg lg:rounded-lg py-2 font-bar-sb">
     <div class="flex justify-between items-center">
       <!-- Logo -->
-      <a class="flex-shrink-0" routerLink="/site/home" fragment="home-spot" href="#home-spot">
+      <a class="shrink-0" routerLink="/site/home" fragment="home-spot" href="#home-spot">
         <img src="/assets/img/logo/logo-color-sinLeyenda.png" alt="Logo" class="h-10 w-auto">
       </a>
 
       <!-- Mobile menu button -->
-      <button (click)="toggleMenu()" class="lg:hidden p-3 rounded-md text-white focus:outline-none" type="button">
+      <button (click)="toggleMenu()" class="lg:hidden p-3 rounded-md  focus:outline-none" type="button">
         <fa-icon class="text-2xl" [icon]="faBars"></fa-icon>
       </button>
 
       <!-- Navigation menu -->
       <div [ngClass]="{'hidden': !isMenuOpen, 'block': isMenuOpen}" class="hidden lg:block lg:ml-auto">
-        <ul class="flex flex-col lg:flex-row lg:space-x-0">
+        <ul class="flex flex-col lg:flex-row lg:space-x-0 f-bar-sb">
           <li class="px-3 py-2 hvr-underline-from-center">
             <a class="text-gray-800 hover:text-brand-red-a transition" routerLink="/site/home" fragment="home-spot" routerLinkActive="active-spot" href="#home-spot">Home</a>
           </li>
@@ -32,7 +32,7 @@
 
     <!-- Mobile menu (expanded) -->
     <div [ngClass]="{'hidden': !isMenuOpen, 'block': isMenuOpen}" class="hidden lg:hidden pb-4">
-      <ul class="flex flex-col space-y-2">
+      <ul class="flex flex-col space-y-2  f-bar-sb">
         <li class="px-3 py-2 hvr-underline-from-center">
           <a class="text-gray-800 hover:text-brand-red-a transition" routerLink="/site/home" fragment="home-spot" routerLinkActive="active-spot" href="#home-spot">Home</a>
         </li>
