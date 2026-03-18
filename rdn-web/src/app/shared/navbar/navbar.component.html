@@ -13,7 +13,7 @@
 
       <!-- Navigation menu -->
       <div [ngClass]="{'hidden': !isMenuOpen, 'block': isMenuOpen}" class="hidden lg:block lg:ml-auto">
-        <ul class="flex flex-col lg:flex-row lg:space-x-0 f-bar-sb">
+        <ul class="flex flex-col lg:flex-row lg:space-x-0 f-bar-sb uppercase text-xs">
           <li class="px-3 py-2 hvr-underline-from-center">
             <a class="text-gray-800 hover:text-brand-red-a transition" routerLink="/site/home" fragment="home-spot" routerLinkActive="active-spot" href="#home-spot">Home</a>
           </li>
@@ -32,7 +32,7 @@
 
     <!-- Mobile menu (expanded) -->
     <div [ngClass]="{'hidden': !isMenuOpen, 'block': isMenuOpen}" class="hidden lg:hidden pb-4">
-      <ul class="flex flex-col space-y-2  f-bar-sb">
+      <ul class="flex flex-col space-y-2  f-bar-sb uppercase text-xs">
         <li class="px-3 py-2 hvr-underline-from-center">
           <a class="text-gray-800 hover:text-brand-red-a transition" routerLink="/site/home" fragment="home-spot" routerLinkActive="active-spot" href="#home-spot">Home</a>
         </li>
