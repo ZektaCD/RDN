@@ -150,7 +150,7 @@
   view-timeline-axis: block;
   animation-timeline: --fin;
   animation-name: fade-in;
-  animation-range: 0% 80%;
+  animation-range: 20% 60%;
   animation-fill-mode: both;
   transition: all ease-in-out;
 }
@@ -158,10 +158,27 @@
 .scroll-fade-out {
   animation-timeline: scroll(root);
   animation-name: fade-out;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
   animation-range: 0 600px;
 }
 
+.view-fade-out {
+  animation-timeline: scroll(root);
+  animation-name: bg-fade-out;
+  /* animation-fill-mode: forwards; */
+  animation-range: 0% 40%;
+  animation-fill-mode: both;
+  transition: all ease-in-out;
+}
+
+@keyframes bg-fade-out {
+  from {
+    background: transparent;
+  }
+  to {
+    background: var(--brand-color-blue);
+  }
+}
 
 @keyframes fade-out {
   from {

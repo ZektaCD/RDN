@@ -3,6 +3,10 @@
   animation: kenburns-top-center 3s ease-out both;
 }
 
+.welcome-section{
+  background: transparent;
+}
+
 .welcome-home {
   background-image: url("/assets/bg/4.jpg");
   background-repeat: no-repeat;
@@ -25,10 +29,6 @@
 .clients-section {
   background-color: #f5f5f5;
   padding-bottom: 2rem;
-}
-
-.contact-section {
-  /* bg-brand-blue is already applied via Tailwind */
 }
 
 /* Accordion styles */

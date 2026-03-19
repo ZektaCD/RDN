@@ -1,6 +1,11 @@
- import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faArrowRightLong,
@@ -15,17 +20,23 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { RouterModule } from '@angular/router';
-
+import { CountUp } from 'countup.js';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FontAwesomeModule, CommonModule, ReactiveFormsModule, FooterComponent, RouterModule],
+  imports: [
+    FontAwesomeModule,
+    CommonModule,
+    ReactiveFormsModule,
+    FooterComponent,
+    RouterModule,
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
   faGear = faGear;
   faCheckCircle = faCircleCheck;
   faArrowRight = faArrowRightLong;
@@ -79,19 +90,20 @@ export class HomeComponent implements OnInit{
     },
   ];
 
-  constructor(private fb: FormBuilder){
-    this.contactForm = this.fb.group(
-      {
-        name_surname: ['', [Validators.required, Validators.minLength(3)]],
-        email: ['', [Validators.required, Validators.email]],
-        number: ['', [Validators.required, Validators.pattern(/^[0-9+\-\s()]+$/)]],
-        message: ['', [Validators.required, Validators.minLength(10)]]
-      }
-    );
+  constructor(private fb: FormBuilder) {
+    this.contactForm = this.fb.group({
+      name_surname: ['', [Validators.required, Validators.minLength(3)]],
+      email: ['', [Validators.required, Validators.email]],
+      number: [
+        '',
+        [Validators.required, Validators.pattern(/^[0-9+\-\s()]+$/)],
+      ],
+      message: ['', [Validators.required, Validators.minLength(10)]],
+    });
   }
 
   ngOnInit(): void {
-    const swiper = new Swiper('.swiper',{
+    const swiper = new Swiper('.swiper', {
       direction: 'horizontal',
       loop: true,
       slidesPerView: 4,
@@ -108,9 +120,32 @@ export class HomeComponent implements OnInit{
         },
       },
     });
+    // const countUp = new CountUp('exp-year', 30, { enableScrollSpy: true });
+    // const countUp_b = new CountUp('proy-end', 300000, {
+    //   separator: '.',
+    //   enableScrollSpy: true,
+    // });
+    // const countUp_c = new CountUp('proj-cont', 860, { enableScrollSpy: true });
+    // const countUp_d = new CountUp('clients-cont', 300, {
+    //   enableScrollSpy: true,
+    // });
+    // if (!countUp.error && !countUp_b.error && !countUp_c.error && !countUp_d.error
+    // ) {
+    //   countUp.start();
+    //   countUp_b.start();
+    //   countUp_c.start();
+    //   countUp_d.start();
+    // } else {
+    //   console.error(
+    //     countUp.error,
+    //     countUp_b.error,
+    //     countUp_c.error,
+    //     countUp_d.error,
+    //   );
+    // }
   }
 
-  get f(){
+  get f() {
     return this.contactForm.controls;
   }
 
@@ -121,7 +156,10 @@ export class HomeComponent implements OnInit{
       this.enviado = false;
 
       const formData = new FormData();
-      formData.append('name', this.contactForm.get('name_surname')?.value || '');
+      formData.append(
+        'name',
+        this.contactForm.get('name_surname')?.value || '',
+      );
       formData.append('email', this.contactForm.get('email')?.value || '');
       formData.append('phone', this.contactForm.get('number')?.value || '');
       formData.append('message', this.contactForm.get('message')?.value || '');
@@ -140,5 +178,4 @@ export class HomeComponent implements OnInit{
       }, 1500);
     }
   }
-
 }
