@@ -150,7 +150,7 @@
   view-timeline-axis: block;
   animation-timeline: --fin;
   animation-name: fade-in;
-  animation-range: 20% 60%;
+  animation-range: 20% 70%;
   animation-fill-mode: both;
   transition: all ease-in-out;
 }

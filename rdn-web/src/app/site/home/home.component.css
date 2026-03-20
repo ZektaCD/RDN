@@ -8,11 +8,12 @@
 }
 
 .welcome-home {
-  background-image: url("/assets/bg/4.jpg");
+  /* background-image: url("/assets/bg/4.jpg"); */
+  /* background-image: url("/assets/video/video_hero.mp4");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: cover; */
 }
 
 .about-section {
@@ -22,8 +23,16 @@
   background-size: cover;
 }
 
+#exp-year::before{
+  content: '+';
+}
+
+#proy-end::before{
+  content: '+';
+}
+
 .services-section {
-  background-color: #fafafa;
+  /* background-color: #fafafa; */
 }
 
 .clients-section {

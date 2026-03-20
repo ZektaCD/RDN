@@ -120,29 +120,26 @@ export class HomeComponent implements OnInit {
         },
       },
     });
-    // const countUp = new CountUp('exp-year', 30, { enableScrollSpy: true });
-    // const countUp_b = new CountUp('proy-end', 300000, {
-    //   separator: '.',
-    //   enableScrollSpy: true,
-    // });
-    // const countUp_c = new CountUp('proj-cont', 860, { enableScrollSpy: true });
-    // const countUp_d = new CountUp('clients-cont', 300, {
-    //   enableScrollSpy: true,
-    // });
-    // if (!countUp.error && !countUp_b.error && !countUp_c.error && !countUp_d.error
-    // ) {
-    //   countUp.start();
-    //   countUp_b.start();
-    //   countUp_c.start();
-    //   countUp_d.start();
-    // } else {
-    //   console.error(
-    //     countUp.error,
-    //     countUp_b.error,
-    //     countUp_c.error,
-    //     countUp_d.error,
-    //   );
-    // }
+    const countUp = new CountUp('exp-year', 30, { enableScrollSpy: true });
+    const countUp_b = new CountUp('proy-end', 1500, {
+      separator: '.',
+      enableScrollSpy: true,
+    });
+    const countUp_c = new CountUp('clients-cont', 300, {
+      enableScrollSpy: true,
+    });
+    if (!countUp.error && !countUp_b.error && !countUp_c.error
+    ) {
+      countUp.start();
+      countUp_b.start();
+      countUp_c.start();
+    } else {
+      console.error(
+        countUp.error,
+        countUp_b.error,
+        countUp_c.error,
+      );
+    }
   }
 
   get f() {
