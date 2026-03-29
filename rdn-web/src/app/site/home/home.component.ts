@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit, signal } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -21,6 +21,7 @@ import 'swiper/css';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { CountUp } from 'countup.js';
+import { SiteService } from '../../core/services/site-service';
 
 @Component({
   selector: 'app-home',
@@ -37,6 +38,9 @@ import { CountUp } from 'countup.js';
   styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit {
+
+  site_service = inject(SiteService);
+
   faGear = faGear;
   faCheckCircle = faCircleCheck;
   faArrowRight = faArrowRightLong;
@@ -103,23 +107,23 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const swiper = new Swiper('.swiper', {
-      direction: 'horizontal',
-      loop: true,
-      slidesPerView: 4,
-      spaceBetween: 20,
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 4,
-        },
-      },
-    });
+    // const swiper = new Swiper('.swiper', {
+    //   direction: 'horizontal',
+    //   loop: true,
+    //   slidesPerView: 4,
+    //   spaceBetween: 20,
+    //   breakpoints: {
+    //     320: {
+    //       slidesPerView: 1,
+    //     },
+    //     768: {
+    //       slidesPerView: 2,
+    //     },
+    //     1024: {
+    //       slidesPerView: 4,
+    //     },
+    //   },
+    // });
     const countUp = new CountUp('exp-year', 30, { enableScrollSpy: true });
     const countUp_b = new CountUp('proy-end', 1500, {
       separator: '.',

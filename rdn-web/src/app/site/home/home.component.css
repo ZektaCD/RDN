@@ -31,13 +31,8 @@
   content: '+';
 }
 
-.services-section {
-  /* background-color: #fafafa; */
-}
-
 .clients-section {
   background-color: #f5f5f5;
-  padding-bottom: 2rem;
 }
 
 /* Accordion styles */
@@ -47,6 +42,70 @@ details summary::-webkit-details-marker {
 
 details > summary {
   list-style: none;
+}
+
+.slider-logos {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 150px; /* ajustá según tus logos */
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: slide 30s linear infinite;
+  align-items: center;
+}
+
+.slider-track img {
+  height: 180px;
+  margin: 0 2rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.slider-logos::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0),
+    rgba(244, 244, 244)
+  );
+  content: " ";
+  z-index: 1;
+}
+
+.slider-logos::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(244, 244, 244)
+  );
+  content: " ";
+  z-index: 1;
+}
+
+.slider-logos:hover .slider-track {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* SI FUERA UN ARRAY SOLO VA AL 100%, PERO COMO HAY DUPLICADO ES 50% */
+  }
 }
 
 /* Keyframe for Kenburns effect */

@@ -98,108 +98,146 @@
   </section>
 
   <!-- SERVICES SECTION -->
-  <section class="py-20 px-40 services-section bg-white" id="service-spot">
-    <div class="mx-auto">
-      <div class="flex flex-wrap gap-4 mb-10">
-        <div class="w-100 relative">
-          <img src="/assets/img/rdn6.jpeg" alt="" class="object-fit h-full">
-          <span class="absolute bottom-0 left-0 h-20 w-full bg-(--brand-color-blue-b)"></span>
-        </div>
-        <div class="w-100">
-          <img src="/assets/img/100_5423.JPG" alt="" class="object-fit h-full">
-        </div>
-        <div class="w-100">
-          <img src="/assets/img/DSC03794.JPG" alt="" class="object-fit h-full">
-        </div>
-        <div class="w-100">
-          <img src="/assets/img/DSC04099.JPG" alt="" class="object-fit h-full">
-        </div>
-      </div>
-      <div class="text-center mb-16">
-        <h2
-          class="f-bar-sb text-4xl md:text-5xl text-(--brand-color-blue) uppercase mb-2"
-        >
-          Ingeniería y Experiencia<br />
-          <span class="f-bar-l text-gray-800">en cada proyecto</span>
-        </h2>
-      </div>
-
-      <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div
-          *ngFor="let item of servicios_info_array"
-          class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition"
-        >
-          <div class="mb-6">
-            <span *ngIf="item.svg === 'pipe'" class="text-4xl">
-              <svg
-                width="50"
-                height="50"
-                viewBox="0 0 193 193"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M176.917 104.542V168.875H160.833V152.792H133.331C127.139 166.945 112.986 176.917 96.5002 176.917C80.0147 176.917 65.8614 166.945 59.6693 152.792H32.1668V168.875H16.0835V104.542H32.1668V120.625H59.7497C63.7706 111.377 71.1689 103.979 80.4168 99.8774V88.4582H64.3335V72.3749H128.667V88.4582H112.583V99.8774C121.831 103.979 129.23 111.377 133.251 120.625H160.833V104.542H176.917ZM136.708 16.0833H56.2918C51.8689 16.0833 48.2502 19.702 48.2502 24.1249C48.2502 28.5478 51.8689 32.1666 56.2918 32.1666H80.4168V40.2083H88.4585V64.3332H104.542V40.2083H112.583V32.1666H136.708C141.131 32.1666 144.75 28.5478 144.75 24.1249C144.75 19.702 141.131 16.0833 136.708 16.0833Z"
-                  fill="#111111"
-                />
-              </svg>
-            </span>
-            <span *ngIf="item.svg === 'build'" class="text-4xl">
-              <svg
-                width="50"
-                height="50"
-                viewBox="0 0 250 250"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M50.8125 15.625C40.0313 15.625 31.2813 24.375 31.2813 35.1562L31.25 167.969C31.25 178.75 40 187.5 50.7812 187.5H78.125V163.047C78.1252 157.673 79.2341 152.358 81.3822 147.433C83.5303 142.507 86.6715 138.078 90.6094 134.422L100.797 124.969C99.3 124.821 97.8776 124.244 96.7006 123.307C95.5236 122.371 94.6419 121.115 94.1615 119.689C93.6812 118.264 93.6225 116.73 93.9925 115.272C94.3626 113.814 95.1457 112.494 96.2477 111.47C97.3497 110.447 98.7238 109.763 100.205 109.501C101.686 109.239 103.212 109.41 104.598 109.994C105.984 110.578 107.172 111.55 108.02 112.793C108.867 114.035 109.338 115.496 109.375 117L135 93.2188C139.893 88.6778 146.111 85.8229 152.744 85.0722C159.377 84.3215 166.076 85.7144 171.859 89.0469C171.654 84.0089 169.508 79.2457 165.87 75.7539C162.233 72.2621 157.386 70.3123 152.344 70.3125H144.578C143.542 70.3125 142.549 69.901 141.816 69.1684C141.083 68.4358 140.672 67.4423 140.672 66.4062L140.703 35.1719C140.703 24.3906 131.953 15.625 121.172 15.625H50.8125Z"
-                  fill="#111111"
-                />
-              </svg>
-            </span>
-            <span *ngIf="item.svg === 'oil'" class="text-4xl">
-              <svg
-                width="50"
-                height="50"
-                viewBox="0 0 193 172"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M177.017 20.5403C173.197 6.23288 158.488 -2.24438 144.18 1.57541L139.02 2.9492C133.291 4.49052 129.906 10.3877 131.448 16.0839L139.657 46.7093L103.369 56.1247L101.258 50.06C99.7502 45.7711 95.6958 42.8895 91.1389 42.8895C86.5819 42.8895 82.5276 45.7711 81.0198 50.06L76.4628 63.1277L32.1667 74.587V61.6534C32.1667 57.1969 28.5814 53.6117 24.125 53.6117C19.6686 53.6117 16.0833 57.1969 16.0833 61.6534V150.112H10.7222C4.79149 150.112 0 154.903 0 160.834C0 166.765 4.79149 171.556 10.7222 171.556H182.278C188.209 171.556 193 166.765 193 160.834C193 154.903 188.209 150.112 182.278 150.112H136.273L113.924 86.281L93.0823 91.6756L102.297 117.945H79.9811L88.7934 92.8148L63.7972 99.2817L46.005 150.112H32.1667V96.7686L145.219 67.4501L153.663 98.9466C155.204 104.676 161.068 108.06 166.798 106.519L171.991 105.145C186.299 101.326 194.776 86.616 190.956 72.3086L177.017 20.5403Z"
-                  fill="#111111"
-                />
-              </svg>
-            </span>
-          </div>
-          <h4 class="font-bar-sb text-xl mb-4 text-gray-900">
-            {{ item.nombre }}
-          </h4>
-          <ul class="font-bar-r text-gray-600 space-y-2">
-            <li
-              *ngFor="let servicio of item.servicios"
-              class="flex items-start gap-2"
-            >
-              <span class="text-brand-red-b mt-1">•</span>
-              <span>{{ servicio }}</span>
-            </li>
-          </ul>
-        </div>
-      </div> -->
+  <section class="py-40 px-60 services-section bg-white" id="service-spot">
+    <div class="mb-16">
+      <h2
+        class="f-bar-b text-4xl lg:text-5xl text-(--brand-color-blue) uppercase mb-2"
+      >
+        Ingeniería y Experiencia<br />
+        <span class="f-bar-l text-gray-800">en cada proyecto</span>
+      </h2>
     </div>
+    <div class="w-10/12 mx-auto">
+    <div class="flex shrink-0 border-t-2 border-gray-300 mb-4">
+      <div
+      class="flex-1 flex items-center py-6 cursor-pointer transition-all ease-in-out"
+      [class.active]="site_service.getSectionTitleState() === 0"
+      [class.border-t-6]="site_service.getSectionTitleState() === 0"
+      [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 0"
+      (click)="site_service.setSectionTitleState(0)">
+        <p class="f-bar-l font-bold text-(--brand-color-blue) text-2xl text-wrap pe-2">Montaje de oleoductos</p>
+      </div>
+      <div
+      class="flex-1 flex items-center py-8 cursor-pointer transition-all ease-in-out"
+      [class.active]="site_service.getSectionTitleState() === 1"
+      [class.border-t-6]="site_service.getSectionTitleState() === 1"
+      [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 1"
+      (click)="site_service.setSectionTitleState(1)">
+        <p class="f-bar-r font-bold text-(--brand-color-blue) text-xl text-wrap pe-2">Servicio 2</p>
+      </div>
+      <div
+      class="flex-1 flex items-center py-8 cursor-pointer transition-all ease-in-out"
+      [class.active]="site_service.getSectionTitleState() === 2"
+      [class.border-t-6]="site_service.getSectionTitleState() === 2"
+      [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 2"
+      (click)="site_service.setSectionTitleState(2)">
+        <p class="f-bar-r font-bold text-(--brand-color-blue) text-xl text-wrap pe-2">Servicio 3</p>
+      </div>
+      <div
+      class="flex-1 flex items-center py-8 cursor-pointer transition-all ease-in-out"
+      [class.active]="site_service.getSectionTitleState() === 3"
+      [class.border-t-6]="site_service.getSectionTitleState() === 3"
+      [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 3"
+      (click)="site_service.setSectionTitleState(3)">
+        <p class="f-bar-r font-bold text-(--brand-color-blue) text-xl text-wrap pe-2">Servicio 4</p>
+      </div>
+      <div
+      class="flex-1 flex items-center py-8 cursor-pointer transition-all ease-in-out"
+      [class.active]="site_service.getSectionTitleState() === 4"
+      [class.border-t-6]="site_service.getSectionTitleState() === 4"
+      [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 4"
+      (click)="site_service.setSectionTitleState(4)">
+        <p class="f-bar-r font-bold text-(--brand-color-blue) text-xl text-wrap pe-2">Servicio 5</p>
+      </div>
+      <div
+      class="flex-1 flex items-center py-8 cursor-pointer transition-all ease-in-out"
+      [class.active]="site_service.getSectionTitleState() === 5"
+      [class.border-t-6]="site_service.getSectionTitleState() === 5"
+      [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 5"
+      (click)="site_service.setSectionTitleState(5)">
+        <p class="f-bar-r font-bold text-(--brand-color-blue) text-xl text-wrap pe-2">Servicio 6</p>
+      </div>
+    </div>
+    <div class="mx-auto relative h-[675px]">
+      <!-- <div class="flex flex-wrap gap-4 mb-10 justify-between"> -->
+      @switch(site_service.getSectionTitleState()){
+        @case(0){
+          <div
+          class="absolute inset-0 overflow-hidden animate__animated"
+          [class.animate__fadeIn]="site_service.getSectionTitleState() === 0"
+          [class.animate__fadeOut]="site_service.getSectionTitleState() !== 0">
+            <img src="/assets/img/rdn6.jpeg" alt="" class="object-cover w-full h-full">
+            <!-- <span class="absolute top-0 left-0 h-30 w-full bg-(--brand-color-blue-b)"></span> -->
+          </div>
+        }
+        @case(1){
+          <div
+          class="absolute inset-0 overflow-hidden animate__animated"
+          [class.animate__fadeIn]="site_service.getSectionTitleState() === 1"
+          [class.animate__fadeOut]="site_service.getSectionTitleState() !== 1">
+            <img src="/assets/img/100_5423.JPG" alt="" class="object-cover h-full w-full">
+          </div>
+        }
+        @case(2){
+          <div
+          class="absolute inset-0 overflow-hidden animate__animated"
+          [class.animate__fadeIn]="site_service.getSectionTitleState() === 2"
+          [class.animate__fadeOut]="site_service.getSectionTitleState() !== 2"
+          >
+            <img src="/assets/img/DSC03794.JPG" alt="" class="object-cover h-full w-full">
+          </div>
+        }
+        @case(3){
+          <div
+          class="absolute inset-0 overflow-hidden animate__animated"
+          [class.animate__fadeIn]="site_service.getSectionTitleState() === 3"
+          [class.animate__fadeOut]="site_service.getSectionTitleState() !== 3"
+          >
+            <img src="/assets/img/DSC04099.JPG" alt="" class="object-cover h-full w-full">
+          </div>
+        }
+        @case(4){
+          <div
+          class="absolute inset-0 overflow-hidden animate__animated"
+          [class.animate__fadeIn]="site_service.getSectionTitleState() === 4"
+          [class.animate__fadeOut]="site_service.getSectionTitleState() !== 4"
+          >
+            <img src="/assets/img/rdn9.jpeg" alt="" class="object-cover h-full w-full">
+          </div>
+        }
+        @case(5){
+          <div
+          class="absolute inset-0 overflow-hidden animate__animated"
+          [class.animate__fadeIn]="site_service.getSectionTitleState() === 5"
+          [class.animate__fadeOut]="site_service.getSectionTitleState() !== 5"
+          >
+            <img src="/assets/img/1000107553.jpg" alt="" class="object-cover h-full w-full">
+          </div>
+        }
+      }
+      <!-- </div> -->
+    </div>
+    </div>
+
   </section>
 
   <!-- CLIENTS SECTION -->
-  <section class="py-20 px-6 md:px-20 clients-section">
+  <section class="py-40 px-6 md:px-20 clients-section">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-12">
-        <h2 class="font-bar-sb text-4xl md:text-5xl text-brand-blue uppercase">
-          Clientes
-          <span class="font-bar-l text-gray-800">que confían en nosotros</span>
-        </h2>
+        <p class="f-bar-sb text-4xl md:text-4xl text-(--brand-color-blue-b) uppercase">
+          Ellos
+          <span class="f-bar-l text-neutral-800">confían en nosotros</span>
+        </p>
       </div>
-      <div class="swiper">
+      <div class="slider-logos" id="slider-logos">
+        <div class="slider-track" id="slider-track">
+          @for (item of site_service.getClientsCarrousel(); track $index) {
+            <img [src]="item" alt="logo" class=""/>
+          }
+        </div>
+      </div>
+      <!-- <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img
@@ -251,19 +289,19 @@
             />
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 
   <!-- CONTACT SECTION bg-(--brand-color-blue)-->
   <section
-    class="py-20 px-6 md:px-20"
+    class="py-40 px-6 md:px-20 bg-slate-900"
     id="contact-spot"
   >
   <div class="w-6/12 flex flex-col mx-auto">
-    <div class="mb-12 text-center">
-      <p class="text-2xl uppercase mb-4 f-bar-sb">contacto</p>
-      <p class="font-bar-r text-lg">
+    <div class="mb-12 text-center text-white">
+      <p class="text-2xl uppercase mb-4 f-bar-sb ">habla con nosotros</p>
+      <p class="f-bar-r text-lg">
         Por cualquier consulta podés dejarnosla completando el formulario de abajo
       </p>
     </div>
@@ -374,13 +412,13 @@
           <button
             type="submit"
             [disabled]="contactForm.invalid || cargando"
-            class="px-10 py-3 text-white font-bar-sb text-lg font-bold bg-(--brand-color-red-a) hover:bg-gray-100 transition disabled:opacity-50 disabled:cursor-not-allowed"
+            class="px-10 py-3 text-white f-bar-sb text-lg font-bold bg-(--brand-color-red-a) hover:bg-transparent hover:border transition disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
           >
           @if(cargando){
             <span class="">Enviando...</span>
 
           }@else{
-            <span class="uppercase text-xs">enviar consulta</span>
+            <span class="uppercase text-sm">enviar consulta</span>
           }
           </button>
         </div>
