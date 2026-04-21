@@ -12,16 +12,14 @@ import {
   faGear,
   faCircleCheck,
 } from '@fortawesome/free-solid-svg-icons';
-import 'animate.css';
-import 'hover.css';
-// import Swiper JS
-import Swiper from 'swiper';
-// import Swiper styles
-import 'swiper/css';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { CountUp } from 'countup.js';
 import { SiteService } from '../../core/services/site-service';
+// import Swiper JS
+import Swiper from 'swiper';
+// import Swiper styles
+
 
 @Component({
   selector: 'app-home',

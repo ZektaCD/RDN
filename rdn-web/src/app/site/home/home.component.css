@@ -1,3 +1,7 @@
+@import 'swiper/css';
+@import 'animate.css';
+@import 'hover.css';
+
 /* Welcome section animations and styling */
 .kenburns-top-left {
   animation: kenburns-top-center 3s ease-out both;

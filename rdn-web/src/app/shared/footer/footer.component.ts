@@ -9,9 +9,7 @@ import { Component } from '@angular/core';
     .footer{
       background: var(--brand-color-red-b);
     }
-    .footer img{
-      width: 200px
-    }
+    
     `
 })
 export class FooterComponent {
