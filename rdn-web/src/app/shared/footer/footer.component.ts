@@ -5,12 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './footer.component.html',
-  styles: `
-    .footer{
-      background: var(--brand-color-red-b);
-    }
-    
-    `
 })
 export class FooterComponent {
 

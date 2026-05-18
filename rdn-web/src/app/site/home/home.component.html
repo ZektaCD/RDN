@@ -18,7 +18,7 @@
     >
       <div class="w-full md:w-3/4 lg:w-1/2 scroll-fade-out">
         <div
-          class="block text-5xl md:text-6xl text-white mb-4 animate__animated animate__slideInUp animate__fast"
+          class="block text-3xl lg:text-5xl md:text-6xl text-white mb-4 animate__animated animate__slideInUp animate__fast"
         >
           <!-- Infraestructura confiable para un futuro sostenible -->
           <p class="f-bar-r ">
@@ -40,7 +40,7 @@
             routerLink="/site/home"
             fragment="service-spot"
             href="#service-spot"
-            class="inline-block px-10 py-3 border-2 border-neutral-50 text-white font-bar-r text-lg hover:bg-[rgba(255,255,255,0.5)] transition delay-200 ease-in-out animate__animated animate__slideInUp animate__delay-2s"
+            class="inline-block px-8 lg:px-10 py-2 lg:py-3 border-2 border-neutral-50 text-white font-bar-r text-lg hover:bg-[rgba(255,255,255,0.5)] transition delay-200 ease-in-out animate__animated animate__slideInUp animate__delay-2s"
           >
             Saber más
           </a>
@@ -50,10 +50,10 @@
   </section>
   <!-- <section class="rdn-section-paddingY rdn-section-paddingX" id="about-spot"> -->
   <!-- <div class="contenedor-about-home"> -->
-  <section class="relative h-dvh grid grid-cols-8 px-40 bg-(--brand-color-blue) scroll-fade-in">
-    <div class="col-span-5 flex flex-col justify-center">
+  <section class="relative h-dvh grid grid-cols-8 bg-(--brand-color-blue) scroll-fade-in w-11/12 lg:w-10/12 mx-auto">
+    <div class="col-span-8 lg:col-span-5 flex flex-col justify-center">
       <p class="text-lg mb-2 f-bar-l text-neutral-300">Ingenieria desde 1991</p>
-      <p class="text-4xl f-bar-r text-white">
+      <p class="text-2xl lg:text-4xl f-bar-r text-white">
         Brindamos soluciones
         integrales en ingeniería, construcción y montajes. Contribuyendo al
         desarrollo sostenible tanto de las industrias de oil & gas, así como
@@ -63,7 +63,7 @@
         y obras civiles complementarias.
       </p>
     </div>
-    <div class="col-span-3 flex items-end justify-center py-40">
+    <div class="col-span-8 lg:col-span-3 flex items-end justify-center py-40">
       <a href="" class="text-sm text-white px-8 py-4 cursor-pointer border-2 border-white hover:bg-[rgba(255,255,255,0.5)] transition f-bar-r">
         MISION, VISION Y VALORES</a>
       <!-- <img
@@ -74,8 +74,8 @@
     </div>
   </section>
 
-  <section class="bg-neutral-50 px-80">
-    <div class="grid grid-cols-9">
+  <section class="bg-neutral-50 ">
+    <div class="grid grid-cols-9 w-11/12 lg:w-10/12 mx-auto">
       <div class="col-span-3 flex flex-col items-center justify-end text-black p-12 text-center">
         <div class="mb-3">
           <span class="text-4xl md:text-5xl xl:text-7xl font-bold f-bar-b text-(--brand-color-blue)" id="exp-year"></span>
@@ -98,8 +98,8 @@
   </section>
 
   <!-- SERVICES SECTION -->
-  <section class="py-40 px-60 services-section bg-white" id="service-spot">
-    <div class="mb-16">
+  <section class="py-40 services-section bg-white" id="service-spot">
+    <div class="mb-16 w-11/12 lg:w-10/12 mx-auto">
       <h2
         class="f-bar-b text-4xl lg:text-5xl text-(--brand-color-blue) uppercase mb-2"
       >
@@ -107,15 +107,15 @@
         <span class="f-bar-l text-gray-800">en cada proyecto</span>
       </h2>
     </div>
-    <div class="w-10/12 mx-auto">
-    <div class="flex shrink-0 border-t-2 border-gray-300 mb-4">
+    <div class="w-11/12 lg:w-9/12 mx-auto">
+    <div class="flex shrink-0 border-t-2 border-gray-300 mb-4 overflow-x-scroll lg:overflow-auto">
       <div
       class="flex-1 flex items-center py-6 cursor-pointer transition-all ease-in-out"
       [class.active]="site_service.getSectionTitleState() === 0"
       [class.border-t-6]="site_service.getSectionTitleState() === 0"
       [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 0"
       (click)="site_service.setSectionTitleState(0)">
-        <p class="f-bar-l font-bold text-(--brand-color-blue) text-2xl text-wrap pe-2">Montaje de oleoductos</p>
+        <p class="mx-auto f-bar-l font-bold text-(--brand-color-blue) text-md lg:text-xl text-wrap ps-2 lg:ps-0 pe-2">Montaje de oleoductos</p>
       </div>
       <div
       class="flex-1 flex items-center py-8 cursor-pointer transition-all ease-in-out"
@@ -123,7 +123,7 @@
       [class.border-t-6]="site_service.getSectionTitleState() === 1"
       [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 1"
       (click)="site_service.setSectionTitleState(1)">
-        <p class="f-bar-r font-bold text-(--brand-color-blue) text-xl text-wrap pe-2">Servicio 2</p>
+        <p class="mx-auto f-bar-r font-bold text-(--brand-color-blue) text-md lg:text-xl text-wrap ps-2 lg:ps-0 pe-2">Instalaciones de detección y extinsión contra incendios</p>
       </div>
       <div
       class="flex-1 flex items-center py-8 cursor-pointer transition-all ease-in-out"
@@ -131,7 +131,7 @@
       [class.border-t-6]="site_service.getSectionTitleState() === 2"
       [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 2"
       (click)="site_service.setSectionTitleState(2)">
-        <p class="f-bar-r font-bold text-(--brand-color-blue) text-xl text-wrap pe-2">Servicio 3</p>
+        <p class="mx-auto f-bar-r font-bold text-(--brand-color-blue) text-md lg:text-xl text-wrap ps-2 lg:ps-0 pe-2">Obras civiles</p>
       </div>
       <div
       class="flex-1 flex items-center py-8 cursor-pointer transition-all ease-in-out"
@@ -139,7 +139,7 @@
       [class.border-t-6]="site_service.getSectionTitleState() === 3"
       [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 3"
       (click)="site_service.setSectionTitleState(3)">
-        <p class="f-bar-r font-bold text-(--brand-color-blue) text-xl text-wrap pe-2">Servicio 4</p>
+        <p class="mx-auto f-bar-r font-bold text-(--brand-color-blue) text-md lg:text-xl text-wrap ps-2 lg:ps-0 pe-2">Estructuras metálicas</p>
       </div>
       <div
       class="flex-1 flex items-center py-8 cursor-pointer transition-all ease-in-out"
@@ -147,7 +147,7 @@
       [class.border-t-6]="site_service.getSectionTitleState() === 4"
       [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 4"
       (click)="site_service.setSectionTitleState(4)">
-        <p class="f-bar-r font-bold text-(--brand-color-blue) text-xl text-wrap pe-2">Servicio 5</p>
+        <p class="mx-auto f-bar-r font-bold text-(--brand-color-blue) text-md lg:text-xl text-wrap ps-2 lg:ps-0 pe-2">Control</p>
       </div>
       <div
       class="flex-1 flex items-center py-8 cursor-pointer transition-all ease-in-out"
@@ -155,7 +155,7 @@
       [class.border-t-6]="site_service.getSectionTitleState() === 5"
       [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 5"
       (click)="site_service.setSectionTitleState(5)">
-        <p class="f-bar-r font-bold text-(--brand-color-blue) text-xl text-wrap pe-2">Servicio 6</p>
+        <p class="mx-auto f-bar-r font-bold text-(--brand-color-blue) text-md lg:text-xl text-wrap ps-2 lg:ps-0 pe-2">Instalaciones electricas</p>
       </div>
     </div>
     <div class="mx-auto relative h-[675px]">
@@ -222,8 +222,8 @@
   </section>
 
   <!-- CLIENTS SECTION -->
-  <section class="py-40 px-6 md:px-20 clients-section">
-    <div class="max-w-7xl mx-auto">
+  <section class="py-20 lg:py-40 clients-section">
+    <div class="w-11/12 lg:w-10/12 mx-auto">
       <div class="text-center mb-12">
         <p class="f-bar-sb text-4xl md:text-4xl text-(--brand-color-blue-b) uppercase">
           Ellos
@@ -295,17 +295,17 @@
 
   <!-- CONTACT SECTION bg-(--brand-color-blue)-->
   <section
-    class="py-40 px-6 md:px-20 bg-slate-900"
+    class="py-40 bg-slate-900"
     id="contact-spot"
   >
-  <div class="w-6/12 flex flex-col mx-auto">
+  <div class="w-11/12 lg:w-10/12 flex flex-col mx-auto">
     <div class="mb-12 text-center text-white">
-      <p class="text-2xl uppercase mb-4 f-bar-sb ">habla con nosotros</p>
+      <p class="text-4xl uppercase mb-4 f-bar-sb ">habla con nosotros</p>
       <p class="f-bar-r text-lg">
         Por cualquier consulta podés dejarnosla completando el formulario de abajo
       </p>
     </div>
-    <div class="w-full">
+    <div class="w-full lg:w-8/12 px-2 lg:px-0 mx-auto">
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <!-- Nombre y Apellido -->
         <div class="mb-2">
