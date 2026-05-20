@@ -37,7 +37,7 @@
         </div>
         <div class="flex">
           <a
-            routerLink="/site/home"
+            [routerLink]="['']"
             fragment="service-spot"
             href="#service-spot"
             class="inline-block px-8 lg:px-10 py-2 lg:py-3 border-2 border-neutral-50 text-white font-bar-r text-lg hover:bg-[rgba(255,255,255,0.5)] transition delay-200 ease-in-out animate__animated animate__slideInUp animate__delay-2s"
@@ -50,7 +50,7 @@
   </section>
   <!-- <section class="rdn-section-paddingY rdn-section-paddingX" id="about-spot"> -->
   <!-- <div class="contenedor-about-home"> -->
-  <section class="relative h-dvh grid grid-cols-8 bg-(--brand-color-blue) scroll-fade-in w-11/12 lg:w-10/12 mx-auto">
+  <section class="relative h-dvh grid grid-cols-8 bg-(--brand-color-blue) scroll-fade-in w-11/12 lg:w-10/12 mx-auto" id="about-spot">
     <div class="col-span-8 lg:col-span-5 flex flex-col justify-center">
       <p class="text-lg mb-2 f-bar-l text-neutral-300">Ingenieria desde 1991</p>
       <p class="text-2xl lg:text-4xl f-bar-r text-white">
@@ -64,7 +64,7 @@
       </p>
     </div>
     <div class="col-span-8 lg:col-span-3 flex items-end justify-center py-40">
-      <a href="" class="text-sm text-white px-8 py-4 cursor-pointer border-2 border-white hover:bg-[rgba(255,255,255,0.5)] transition f-bar-r">
+      <a [routerLink]="['/about']" class="text-sm text-white px-8 py-4 cursor-pointer border-2 border-white hover:bg-[rgba(255,255,255,0.5)] transition f-bar-r">
         MISION, VISION Y VALORES</a>
       <!-- <img
         class="w-full h-full object-cover rounded-lg p-5 opacity-20"

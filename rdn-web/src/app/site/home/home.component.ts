@@ -13,9 +13,10 @@ import {
   faCircleCheck,
 } from '@fortawesome/free-solid-svg-icons';
 import { FooterComponent } from '../../shared/footer/footer.component';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 import { CountUp } from 'countup.js';
 import { SiteService } from '../../core/services/site-service';
+import { SendEmail } from '../../services/send-email';
 // import Swiper JS
 import Swiper from 'swiper';
 // import Swiper styles
@@ -30,6 +31,7 @@ import Swiper from 'swiper';
     ReactiveFormsModule,
     FooterComponent,
     RouterModule,
+    RouterLink
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './home.component.html',
@@ -38,6 +40,7 @@ import Swiper from 'swiper';
 export class HomeComponent implements OnInit {
 
   site_service = inject(SiteService);
+  send_email_service = inject(SendEmail);
 
   faGear = faGear;
   faCheckCircle = faCircleCheck;
@@ -148,7 +151,7 @@ export class HomeComponent implements OnInit {
     return this.contactForm.controls;
   }
 
-  onSubmit() {
+  async onSubmit() {
     if (this.contactForm.valid) {
       this.cargando = true;
       this.error = '';
@@ -159,22 +162,31 @@ export class HomeComponent implements OnInit {
         'name',
         this.contactForm.get('name_surname')?.value || '',
       );
+      formData.append(
+        'name_surname',
+        this.contactForm.get('name_surname')?.value || '',
+      );
       formData.append('email', this.contactForm.get('email')?.value || '');
       formData.append('phone', this.contactForm.get('number')?.value || '');
       formData.append('message', this.contactForm.get('message')?.value || '');
+      formData.append('messaje', this.contactForm.get('message')?.value || '');
 
-      // TODO: Implementar envío al backend
-      // Simulamos delay para demostración
-      setTimeout(() => {
-        this.cargando = false;
+      try {
+        await this.send_email_service.sendContactEmail(formData);
         this.enviado = true;
         this.contactForm.reset();
 
-        // Ocultar mensaje de éxito después de 5 segundos
         setTimeout(() => {
           this.enviado = false;
         }, 5000);
-      }, 1500);
+      } catch (error) {
+        this.error =
+          error instanceof Error
+            ? error.message
+            : 'No pudimos enviar tu consulta. Intentá nuevamente.';
+      } finally {
+        this.cargando = false;
+      }
     }
   }
 }

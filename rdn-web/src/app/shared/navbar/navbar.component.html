@@ -15,16 +15,16 @@
       <div [ngClass]="{'hidden': !isMenuOpen, 'block': isMenuOpen}" class="hidden lg:block lg:ml-auto">
         <ul class="flex flex-col lg:flex-row lg:space-x-0 f-bar-sb uppercase text-xs">
           <li class="px-3 py-2 hvr-underline-from-center">
-            <a class="text-gray-800 hover:text-brand-red-a transition" routerLink="/site/home" fragment="home-spot" routerLinkActive="active-spot" href="#home-spot">Home</a>
+            <a class="text-gray-800 hover:text-brand-red-a transition" [routerLink]="['']" fragment="home-spot" routerLinkActive="active-spot" href="#home-spot">Home</a>
           </li>
           <li class="px-3 py-2 hvr-underline-from-center">
-            <a class="text-gray-800 hover:text-brand-red-a transition" routerLink="/site/home" fragment="about-spot" routerLinkActive="active-spot" href="#about-spot">La Empresa</a>
+            <a class="text-gray-800 hover:text-brand-red-a transition" [routerLink]="['']" fragment="about-spot" routerLinkActive="active-spot" href="#about-spot">La Empresa</a>
           </li>
           <li class="px-3 py-2 hvr-underline-from-center">
-            <a class="text-gray-800 hover:text-brand-red-a transition" routerLink="/site/home" fragment="service-spot" routerLinkActive="active-spot" href="#service-spot">Servicios</a>
+            <a class="text-gray-800 hover:text-brand-red-a transition" [routerLink]="['']" fragment="service-spot" routerLinkActive="active-spot" href="#service-spot">Servicios</a>
           </li>
           <li class="px-3 py-2 hvr-underline-from-center">
-            <a class="text-gray-800 hover:text-brand-red-a transition" routerLink="/site/home" fragment="contact-spot" href="#contact-spot">Contacto</a>
+            <a class="text-gray-800 hover:text-brand-red-a transition" [routerLink]="['']" fragment="contact-spot" href="#contact-spot">Contacto</a>
           </li>
         </ul>
       </div>
@@ -34,16 +34,16 @@
     <div [ngClass]="{'hidden': !isMenuOpen, 'block': isMenuOpen}" class="hidden lg:hidden pb-4">
       <ul class="flex flex-col space-y-2  f-bar-sb uppercase text-xs">
         <li class="px-3 py-2 hvr-underline-from-center">
-          <a class="text-gray-800 hover:text-brand-red-a transition" routerLink="/site/home" fragment="home-spot" routerLinkActive="active-spot" href="#home-spot">Home</a>
+          <a class="text-gray-800 hover:text-brand-red-a transition" [routerLink]="['']" fragment="home-spot" routerLinkActive="active-spot" href="#home-spot">Home</a>
         </li>
         <li class="px-3 py-2 hvr-underline-from-center">
-          <a class="text-gray-800 hover:text-brand-red-a transition" routerLink="/site/home" fragment="about-spot" routerLinkActive="active-spot" href="#about-spot">La Empresa</a>
+          <a class="text-gray-800 hover:text-brand-red-a transition" [routerLink]="['']" fragment="about-spot" routerLinkActive="active-spot" href="#about-spot">La Empresa</a>
         </li>
         <li class="px-3 py-2 hvr-underline-from-center">
-          <a class="text-gray-800 hover:text-brand-red-a transition" routerLink="/site/home" fragment="service-spot" routerLinkActive="active-spot" href="#service-spot">Servicios</a>
+          <a class="text-gray-800 hover:text-brand-red-a transition" [routerLink]="['']" fragment="service-spot" routerLinkActive="active-spot" href="#service-spot">Servicios</a>
         </li>
         <li class="px-3 py-2 hvr-underline-from-center">
-          <a class="text-gray-800 hover:text-brand-red-a transition" routerLink="/site/home" fragment="contact-spot" href="#contact-spot">Contacto</a>
+          <a class="text-gray-800 hover:text-brand-red-a transition" [routerLink]="['']" fragment="contact-spot" href="#contact-spot">Contacto</a>
         </li>
       </ul>
     </div>

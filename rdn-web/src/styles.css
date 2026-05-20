@@ -60,6 +60,7 @@
 
 .html{
   font-family: 'bar-r';
+  scroll-behavior: smooth;
 }
 
 .rdn-section-paddingY{

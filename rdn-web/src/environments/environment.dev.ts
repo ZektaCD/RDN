@@ -1,5 +1,5 @@
 export const environment = {
   prod: false,
-  baseUrl: "http://localhost/rdn-web",
-  pdfUrl:"http://localhost/rdn-web"
+  baseUrl: "http://localhost:80/MyProjects/",
+  pdfUrl:"http://localhost:80/MyProjects/"
 }
