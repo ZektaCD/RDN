@@ -1,5 +1,5 @@
 <nav class="fixed top-0 lg:top-5 left-0 lg:left-3/12 w-full lg:w-6/12 z-50">
-  <div class="max-w-7xl mx-auto px-5 bg-[rgba(255,255,255,0.7)] backdrop-blur-xl shadow-lg lg:rounded-lg py-2 font-bar-sb">
+  <div class="max-w-7xl mx-auto px-5 bg-[rgba(255,255,255,0.5)] backdrop-blur-xl shadow-lg rounded-bl-lg rounded-br-lg lg:rounded-lg py-2 font-bar-sb">
     <div class="flex justify-between items-center">
       <!-- Logo -->
       <a class="shrink-0" routerLink="/site/home" fragment="home-spot" href="#home-spot">
@@ -12,12 +12,12 @@
       </button>
 
       <!-- Navigation menu -->
-      <div [ngClass]="{'hidden': !isMenuOpen, 'block': isMenuOpen}" class="hidden lg:block lg:ml-auto">
-        <ul class="flex flex-col lg:flex-row lg:space-x-0 f-bar-sb uppercase text-xs">
+      <div class="hidden lg:block lg:ml-auto">
+        <ul class="flex flex-col lg:flex-row lg:space-x-0 f-bar-sb uppercase text-sm">
           <li class="px-3 py-2 hvr-underline-from-center">
             <a class="text-gray-800 hover:text-brand-red-a transition" [routerLink]="['']" fragment="home-spot" routerLinkActive="active-spot" href="#home-spot">Home</a>
           </li>
-          <li class="px-3 py-2 hvr-underline-from-center">
+          <li class="px-3 py-2 hvr-underline-from-center" >
             <a class="text-gray-800 hover:text-brand-red-a transition" [routerLink]="['']" fragment="about-spot" routerLinkActive="active-spot" href="#about-spot">La Empresa</a>
           </li>
           <li class="px-3 py-2 hvr-underline-from-center">
@@ -31,8 +31,8 @@
     </div>
 
     <!-- Mobile menu (expanded) -->
-    <div [ngClass]="{'hidden': !isMenuOpen, 'block': isMenuOpen}" class="hidden lg:hidden pb-4">
-      <ul class="flex flex-col space-y-2  f-bar-sb uppercase text-xs">
+    <div [ngClass]="{'hidden': !isMenuOpen, 'block': isMenuOpen}" class="block lg:hidden pb-4 ">
+      <ul class="flex flex-col justify-center items-center space-y-2 f-bar-sb uppercase text-sm">
         <li class="px-3 py-2 hvr-underline-from-center">
           <a class="text-gray-800 hover:text-brand-red-a transition" [routerLink]="['']" fragment="home-spot" routerLinkActive="active-spot" href="#home-spot">Home</a>
         </li>

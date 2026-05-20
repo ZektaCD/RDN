@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import 'animate.css';
+@import 'hover.css';
 :root{
   --brand-color-red-a: #DA241B;
   --brand-color-red-b: #9D251F;
