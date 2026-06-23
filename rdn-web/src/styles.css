@@ -122,6 +122,10 @@
   color: white;
 }
 
+input[type="text"], input[type="email"], textarea {
+  outline: none;
+}
+
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (max-width: 1400px) {
 

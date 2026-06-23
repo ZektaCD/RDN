@@ -50,8 +50,8 @@
   </section>
   <!-- <section class="rdn-section-paddingY rdn-section-paddingX" id="about-spot"> -->
   <!-- <div class="contenedor-about-home"> -->
-  <section class="relative h-dvh grid grid-cols-8 bg-(--brand-color-blue) scroll-fade-in w-11/12 lg:w-10/12 mx-auto" id="about-spot">
-    <div class="col-span-8 lg:col-span-5 flex flex-col justify-center">
+  <section class="relative h-dvh grid grid-cols-8 bg-(--brand-color-blue) scroll-fade-in mx-auto overflow-hidden" id="about-spot">
+    <div class="col-span-8 lg:col-span-5 flex flex-col justify-center w-11/12 lg:w-10/12 mx-auto">
       <p class="text-lg mb-2 f-bar-l text-neutral-300">Ingenieria desde 1991</p>
       <p class="text-2xl lg:text-4xl f-bar-r text-white">
         Brindamos soluciones
@@ -63,7 +63,7 @@
         y obras civiles complementarias.
       </p>
     </div>
-    <div class="col-span-8 lg:col-span-3 flex items-end justify-center py-40">
+    <div class="col-span-8 lg:col-span-3 flex items-end justify-center py-20 lg:py-40">
       <a [routerLink]="['/about']" class="text-sm text-white px-8 py-4 cursor-pointer border-2 border-white hover:bg-[rgba(255,255,255,0.5)] transition f-bar-r">
         MISION, VISION Y VALORES</a>
       <!-- <img
@@ -71,6 +71,9 @@
         src="/assets/img/logo/logo-rellenoNegro.png"
         alt="RDN Vintage"
       /> -->
+    </div>
+    <div class="absolute inset-0">
+      <img src="/assets/img/bg/ondas-1440.svg" alt="" class="w-full h-full object-cover opacity-5"/>
     </div>
   </section>
 
@@ -115,7 +118,7 @@
       [class.border-t-6]="site_service.getSectionTitleState() === 0"
       [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 0"
       (click)="site_service.setSectionTitleState(0)">
-        <p class="mx-auto f-bar-l font-bold text-(--brand-color-blue) text-md lg:text-xl text-wrap ps-2 lg:ps-0 pe-2">Montaje de oleoductos</p>
+        <p class="mx-auto f-bar-l font-bold text-(--brand-color-blue) text-md lg:text-xl text-wrap ps-2 lg:ps-0 pe-2">Servicios Petroleros</p>
       </div>
       <div
       class="flex-1 flex items-center py-8 cursor-pointer transition-all ease-in-out"
@@ -123,7 +126,7 @@
       [class.border-t-6]="site_service.getSectionTitleState() === 1"
       [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 1"
       (click)="site_service.setSectionTitleState(1)">
-        <p class="mx-auto f-bar-r font-bold text-(--brand-color-blue) text-md lg:text-xl text-wrap ps-2 lg:ps-0 pe-2">Instalaciones de detección y extinsión contra incendios</p>
+        <p class="mx-auto f-bar-r font-bold text-(--brand-color-blue) text-md lg:text-xl text-wrap ps-2 lg:ps-0 pe-2">Obras civiles</p>
       </div>
       <div
       class="flex-1 flex items-center py-8 cursor-pointer transition-all ease-in-out"
@@ -131,7 +134,7 @@
       [class.border-t-6]="site_service.getSectionTitleState() === 2"
       [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 2"
       (click)="site_service.setSectionTitleState(2)">
-        <p class="mx-auto f-bar-r font-bold text-(--brand-color-blue) text-md lg:text-xl text-wrap ps-2 lg:ps-0 pe-2">Obras civiles</p>
+        <p class="mx-auto f-bar-r font-bold text-(--brand-color-blue) text-md lg:text-xl text-wrap ps-2 lg:ps-0 pe-2">Plantas de procesos y redes</p>
       </div>
       <div
       class="flex-1 flex items-center py-8 cursor-pointer transition-all ease-in-out"
@@ -139,7 +142,7 @@
       [class.border-t-6]="site_service.getSectionTitleState() === 3"
       [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 3"
       (click)="site_service.setSectionTitleState(3)">
-        <p class="mx-auto f-bar-r font-bold text-(--brand-color-blue) text-md lg:text-xl text-wrap ps-2 lg:ps-0 pe-2">Estructuras metálicas</p>
+        <p class="mx-auto f-bar-r font-bold text-(--brand-color-blue) text-md lg:text-xl text-wrap ps-2 lg:ps-0 pe-2">Plantas industriales</p>
       </div>
       <div
       class="flex-1 flex items-center py-8 cursor-pointer transition-all ease-in-out"
@@ -147,16 +150,16 @@
       [class.border-t-6]="site_service.getSectionTitleState() === 4"
       [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 4"
       (click)="site_service.setSectionTitleState(4)">
-        <p class="mx-auto f-bar-r font-bold text-(--brand-color-blue) text-md lg:text-xl text-wrap ps-2 lg:ps-0 pe-2">Control</p>
+        <p class="mx-auto f-bar-r font-bold text-(--brand-color-blue) text-md lg:text-xl text-wrap ps-2 lg:ps-0 pe-2">Obras electricas</p>
       </div>
-      <div
+      <!-- <div
       class="flex-1 flex items-center py-8 cursor-pointer transition-all ease-in-out"
       [class.active]="site_service.getSectionTitleState() === 5"
       [class.border-t-6]="site_service.getSectionTitleState() === 5"
       [class.border-(--brand-color-blue)]="site_service.getSectionTitleState() === 5"
       (click)="site_service.setSectionTitleState(5)">
         <p class="mx-auto f-bar-r font-bold text-(--brand-color-blue) text-md lg:text-xl text-wrap ps-2 lg:ps-0 pe-2">Instalaciones electricas</p>
-      </div>
+      </div> -->
     </div>
     <div class="mx-auto relative h-[675px]">
       <!-- <div class="flex flex-wrap gap-4 mb-10 justify-between"> -->
@@ -222,10 +225,10 @@
   </section>
 
   <!-- CLIENTS SECTION -->
-  <section class="py-20 lg:py-40 clients-section">
+  <section class="py-20 lg:py-40 relative clients-section">
     <div class="w-11/12 lg:w-10/12 mx-auto">
       <div class="text-center mb-12">
-        <p class="f-bar-sb text-4xl md:text-4xl text-(--brand-color-blue-b) uppercase">
+        <p class="f-bar-sb text-4xl md:text-6xl text-(--brand-color-blue-b) uppercase">
           Ellos
           <span class="f-bar-l text-neutral-800">confían en nosotros</span>
         </p>
@@ -233,82 +236,44 @@
       <div class="slider-logos" id="slider-logos">
         <div class="slider-track" id="slider-track">
           @for (item of site_service.getClientsCarrousel(); track $index) {
-            <img [src]="item" alt="logo" class=""/>
+            <img [src]="item" alt="logo" class="w-50"/>
           }
         </div>
       </div>
-      <!-- <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img
-              class="w-32 h-32 object-contain mx-auto"
-              src="/assets/img/clientes/2.png"
-              alt="Cliente 1"
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              class="w-32 h-32 object-contain mx-auto"
-              src="/assets/img/clientes/3.png"
-              alt="Cliente 2"
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              class="w-32 h-32 object-contain mx-auto"
-              src="/assets/img/clientes/4.png"
-              alt="Cliente 3"
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              class="w-32 h-32 object-contain mx-auto"
-              src="/assets/img/clientes/5.png"
-              alt="Cliente 4"
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              class="w-32 h-32 object-contain mx-auto"
-              src="/assets/img/clientes/6.png"
-              alt="Cliente 5"
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              class="w-32 h-32 object-contain mx-auto"
-              src="/assets/img/clientes/7.png"
-              alt="Cliente 6"
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              class="w-32 h-32 object-contain mx-auto"
-              src="/assets/img/clientes/8.png"
-              alt="Cliente 7"
-            />
-          </div>
-        </div>
-      </div> -->
+    </div>
+    <div class="absolute inset-0 overflow-hidden">
+      <img src="/assets/img/bg/trama_tecnica_cruz_normal.svg" alt="" class="w-full h-full object-cover opacity-50 lg:opacity-30 self-center"/>
     </div>
   </section>
 
   <!-- CONTACT SECTION bg-(--brand-color-blue)-->
   <section
-    class="py-40 bg-slate-900"
+    class="py-20 bg-white"
     id="contact-spot"
   >
-  <div class="w-11/12 lg:w-10/12 flex flex-col mx-auto">
-    <div class="mb-12 text-center text-white">
-      <p class="text-4xl uppercase mb-4 f-bar-sb ">habla con nosotros</p>
-      <p class="f-bar-r text-lg">
-        Por cualquier consulta podés dejarnosla completando el formulario de abajo
-      </p>
+  <div class="flex flex-wrap w-full px-2 lg:px-50 text-(--brand-color-blue)">
+    <div class="mb-12 text-left flex flex-col justify-start lg:justify-between h-auto lg:h-125">
+      <div class="">
+        <p class="text-5xl lg:text-7xl uppercase mb-4 f-bar-l">contactanos</p>
+        <p class="f-bar-r text-sm lg:text-lg mb-4">
+          Dejanos tu consulta y nos pondremos en contacto a la brevedad. <br>
+        </p>
+        <div class="mb-4">
+          <a href="https://www.linkedin.com/company/rdn" target="_blank" class="px-3 lg:px-2 py-1 lg:py-0 text-2xl lg:text-3xl border border-(--brand-color-blue) bg-transparent hover:bg-(--brand-color-blue) text-(--brand-color-blue) hover:text-white transition-all ease-in-out delay-200">
+            <fa-icon [icon]="faLinkedIn" class=""></fa-icon>
+          </a>
+        </div>
+      </div>
+      <div class="">
+        <p class="text-sm uppercase f-bar-r">Entre Rios 477, Neuqúen Confluencia</p>
+        <p class="text-sm uppercase f-bar-r">tel: +54 299 5796610</p>
+      </div>
+      <!-- <p class="text-sm uppercase f-bar-r"></p> -->
     </div>
-    <div class="w-full lg:w-8/12 px-2 lg:px-0 mx-auto">
-      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="w-full lg:w-6/12 px-2 py-8 lg:px-0 mx-auto bg-(--brand-color-blue) rounded-lg">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="p-8 gap-y-4 flex flex-col">
         <!-- Nombre y Apellido -->
-        <div class="mb-2">
+        <div class="">
           <!-- <label for="nombre" class="block font-bar-r text-white mb-2"
             >Nombre y Apellido</label
           > -->
@@ -316,7 +281,7 @@
             type="text"
             id="nombre"
             formControlName="name_surname"
-            class="w-full bg-white px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red-a transition"
+            class="w-full text-white px-4 py-2 border-b border-gray-200 focus:border-white transition placeholder:text-gray-500"
             placeholder="Nombre completo*"
           />
           <div
@@ -333,7 +298,7 @@
         </div>
 
         <!-- Email -->
-        <div class="mb-2">
+        <div class="">
           <!-- <label for="email" class="block font-bar-r text-white mb-2"
             >Email</label
           > -->
@@ -341,7 +306,7 @@
             type="email"
             id="email"
             formControlName="email"
-            class="w-full px-4 py-2 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red-a transition"
+            class="w-full px-4 py-2 text-white bg-transparent border-b border-gray-200 focus:border-white transition placeholder:text-gray-500"
             placeholder="Ingrese email"
           />
           <div
@@ -358,7 +323,7 @@
         </div>
 
         <!-- Teléfono -->
-        <div class="mb-2">
+        <div class="">
           <!-- <label for="phone" class="block font-bar-r text-white mb-2"
             >Teléfono</label
           > -->
@@ -366,7 +331,7 @@
             type="tel"
             id="phone"
             formControlName="number"
-            class="w-full px-4 py-2 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red-a transition"
+            class="w-full px-4 py-2 bg-transparent text-white border-b border-gray-200 focus:border-white transition placeholder:text-gray-500"
             placeholder="Teléfono"
           />
           <div
@@ -383,14 +348,14 @@
         </div>
 
         <!-- Mensaje -->
-        <div class="mb-2">
+        <div class="">
           <!-- <label for="message" class="block font-bar-r text-white mb-2"
             >Mensaje</label
           > -->
           <textarea
             id="message"
             formControlName="message"
-            class="w-full px-4 py-2 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red-a transition"
+            class="w-full px-4 py-2 bg-transparent text-white border-b border-gray-200 focus:border-white transition placeholder:text-gray-500"
             placeholder="Consulta"
             rows="5"
           ></textarea>
@@ -406,23 +371,21 @@
             </div>
           </div>
         </div>
-
         <!-- Submit Button -->
-        <div class="text-center">
+        <div class="">
           <button
             type="submit"
             [disabled]="contactForm.invalid || cargando"
-            class="px-10 py-3 border border-transparent hover:border-neutral-50 text-white f-bar-sb text-lg font-bold bg-(--brand-color-red-a) hover:bg-transparent transition disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+            class="px-6 py-2 rounded-lg border border-white hover:border-transparent text-white hover:text-(--brand-color-blue) f-bar-sb text-lg font-bold bg-transparent hover:bg-white transition disabled:opacity-80 disabled:cursor-not-allowed cursor-pointer"
           >
           @if(cargando){
             <span class="">Enviando...</span>
 
           }@else{
-            <span class="uppercase text-sm">enviar consulta</span>
+            <span class="capitalize text-sm">enviar consulta</span>
           }
           </button>
         </div>
-
         <!-- Success/Error Messages -->
         <div
           *ngIf="enviado"
@@ -440,5 +403,8 @@
     </div>
   </div>
   </section>
+  <div class="bg-neutral-800 text-white text-xs py-2 flex items-center justify-center">
+    Diseñado y Desarrollado por <strong class="text-lime-400 ps-1">Core Design</strong>
+  </div>
 </main>
-<app-footer></app-footer>
+<!-- <app-footer></app-footer> -->

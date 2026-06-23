@@ -12,6 +12,7 @@ import {
   faGear,
   faCircleCheck,
 } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { RouterLink, RouterModule } from '@angular/router';
 import { CountUp } from 'countup.js';
@@ -45,6 +46,7 @@ export class HomeComponent implements OnInit {
   faGear = faGear;
   faCheckCircle = faCircleCheck;
   faArrowRight = faArrowRightLong;
+  faLinkedIn = faLinkedinIn;
 
   cargando = false;
   enviado = false;
@@ -108,23 +110,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // const swiper = new Swiper('.swiper', {
-    //   direction: 'horizontal',
-    //   loop: true,
-    //   slidesPerView: 4,
-    //   spaceBetween: 20,
-    //   breakpoints: {
-    //     320: {
-    //       slidesPerView: 1,
-    //     },
-    //     768: {
-    //       slidesPerView: 2,
-    //     },
-    //     1024: {
-    //       slidesPerView: 4,
-    //     },
-    //   },
-    // });
     const countUp = new CountUp('exp-year', 30, { enableScrollSpy: true });
     const countUp_b = new CountUp('proy-end', 1500, {
       separator: '.',
