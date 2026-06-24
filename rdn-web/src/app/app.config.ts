@@ -11,7 +11,7 @@ export const appConfig: ApplicationConfig = {
       withHashLocation(),
       withInMemoryScrolling({
         scrollPositionRestoration: 'top',
-        anchorScrolling: 'enabled'
+        anchorScrolling: 'disabled'
       }),
     ),
 

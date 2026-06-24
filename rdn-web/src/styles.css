@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import 'animate.css';
 @import 'hover.css';
+@import 'lenis/dist/lenis.css';
 :root{
   --brand-color-red-a: #DA241B;
   --brand-color-red-b: #9D251F;
@@ -62,7 +63,6 @@
 
 .html{
   font-family: 'bar-r';
-  scroll-behavior: smooth;
 }
 
 .rdn-section-paddingY{

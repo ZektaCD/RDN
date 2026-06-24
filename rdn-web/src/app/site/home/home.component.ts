@@ -18,6 +18,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { CountUp } from 'countup.js';
 import { SiteService } from '../../core/services/site-service';
 import { SendEmail } from '../../services/send-email';
+import { LucideDroplet, LucideNetwork, LucideZap, LucideHardHat, LucideFactory} from '@lucide/angular';
 // import Swiper JS
 import Swiper from 'swiper';
 // import Swiper styles
@@ -29,6 +30,11 @@ import Swiper from 'swiper';
   imports: [
     FontAwesomeModule,
     CommonModule,
+    LucideDroplet,
+    LucideNetwork,
+    LucideZap,
+    LucideHardHat,
+    LucideFactory,
     ReactiveFormsModule,
     FooterComponent,
     RouterModule,
